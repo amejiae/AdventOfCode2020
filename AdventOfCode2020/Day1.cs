@@ -18,7 +18,13 @@ namespace AdventOfCode2020
             _input3 = GetInputAsList();
         }
 
-        public override string SolvePart1()
+        public override void Solve()
+        {
+            Console.WriteLine(SolvePart1());
+            Console.WriteLine(SolvePart2());
+        }
+
+        public string SolvePart1()
         {
             foreach (int expense in _input1)
             {
@@ -34,7 +40,7 @@ namespace AdventOfCode2020
             return string.Empty;
         }
 
-        public override string SolvePart2()
+        public string SolvePart2()
         {
             foreach (int expense in _input1)
             {
