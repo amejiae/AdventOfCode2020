@@ -1,10 +1,10 @@
 ﻿namespace AdventOfCode2020
 {
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
-            ProgramRunner runner = new ProgramRunner();
+            var runner = new ProgramRunner();
             runner.Run<Day2>();
         }
     }
