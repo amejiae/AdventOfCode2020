@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AdventOfCode2020
+﻿namespace AdventOfCode2020
 {
     public abstract class ProgramBase : IProgram
     {

@@ -1,13 +1,11 @@
-﻿using System;
-
-namespace AdventOfCode2020
+﻿namespace AdventOfCode2020
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             ProgramRunner runner = new ProgramRunner();
-            runner.Run<Day1>();
+            runner.Run<Day2>();
         }
     }
 }
