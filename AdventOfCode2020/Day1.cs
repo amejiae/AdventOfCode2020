@@ -2,31 +2,55 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 
 namespace AdventOfCode2020
 {
     public class Day1 : ProgramBase
     {
-        public override void Solve()
-        {
-            List<int> input1 = GetInputAsList();
-            List<int> input2 = GetInputAsList();
-            List<int> input3 = GetInputAsList();
+        private readonly List<int> _input1;
+        private readonly List<int> _input2;
+        private readonly List<int> _input3;
 
-            foreach (int expense in input1)
+        public Day1()
+        {
+            _input1 = GetInputAsList();
+            _input2 = GetInputAsList();
+            _input3 = GetInputAsList();
+        }
+
+        public override string SolvePart1()
+        {
+            foreach (int expense in _input1)
             {
-                foreach (var expense2 in input2)
+                foreach (var expense2 in _input2)
                 {
-                    foreach (int expense3 in input3)
+                    if (expense + expense2 == 2020)
+                    {
+                        return (expense * expense2).ToString();
+                    }
+                }
+            }
+
+            return string.Empty;
+        }
+
+        public override string SolvePart2()
+        {
+            foreach (int expense in _input1)
+            {
+                foreach (var expense2 in _input2)
+                {
+                    foreach (int expense3 in _input3)
                     {
                         if (expense + expense2 + expense3 == 2020)
                         {
-                            Console.WriteLine(expense * expense2 * expense3);
+                            return (expense * expense2 * expense3).ToString();
                         }
                     }
                 }
             }
+
+            return string.Empty;
         }
 
         private List<int> GetInputAsList()
